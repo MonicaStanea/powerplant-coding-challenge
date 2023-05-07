@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PowerstationAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Fuels">
+            <summary>
+            Informations about fuels used in the powerplants
+            </summary>
+        </member>
+        <member name="P:Fuels.Gas">
+            <summary>
+            The gas price in euro/MWh
+            </summary>
+        </member>
+        <member name="P:Fuels.Kerosine">
+            <summary>
+            The kerosine price in euro/MWh
+            </summary>
+        </member>
+        <member name="P:Fuels.Co2">
+            <summary>
+            The Co2 emission price in euro/ton
+            </summary>
+        </member>
+        <member name="P:Fuels.Wind">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PowerstationAPI.Models.Payload">
+            <summary>
+            Schema for the json object needs to be sent in the body of the request
+            </summary>
+        </member>
+        <member name="P:PowerstationAPI.Models.Payload.Load">
+            <summary>
+            load
+            </summary>
+        </member>
+        <member name="P:PowerstationAPI.Models.Payload.Fuels">
+            <summary>
+            fuels
+            </summary>
+        </member>
+        <member name="P:PowerstationAPI.Models.Payload.Powerplants">
+            <summary>
+            powerplants
+            </summary>
+        </member>
+        <member name="T:PowerstationAPI.Models.PowerplantOn">
+            <summary>
+            The class containing the properties for a powerplant that will be returned
+            </summary>
+        </member>
+        <member name="P:PowerstationAPI.Models.PowerplantOn.Name">
+            <summary>
+            the name or the powerplant
+            </summary>
+        </member>
+        <member name="P:PowerstationAPI.Models.PowerplantOn.P">
+            <summary>
+            the power that needs to generate
+            </summary>
+        </member>
+        <member name="T:Powerplant">
+            <summary>
+            The class with the powerplant properties
+            </summary>
+        </member>
+        <member name="P:Powerplant.Name">
+            <summary>
+            The name of the powerplant
+            </summary>
+        </member>
+        <member name="P:Powerplant.Type">
+            <summary>
+            The type of the powerplant
+            </summary>
+        </member>
+        <member name="P:Powerplant.Efficiency">
+            <summary>
+            The efficiency of the powerplant
+            </summary>
+        </member>
+        <member name="P:Powerplant.Pmin">
+            <summary>
+            The minimum power generated when the powerplant is turned on
+            </summary>
+        </member>
+        <member name="P:Powerplant.Pmax">
+            <summary>
+            The maximum power generated when the powerplant is turned on
+            </summary>
+        </member>
+        <member name="P:Powerplant.PriceOfKwh">
+            <summary>
+            The price to produce a kWh
+            </summary>
+        </member>
+        <member name="P:Powerplant.PminReal">
+            <summary>
+            Pmin x Efficiency
+            </summary>
+        </member>
+        <member name="P:Powerplant.PmaxReal">
+            <summary>
+            Pmax x Efficiency
+            </summary>
+        </member>
+        <member name="M:PowerCalculator.SetPowerplantCalculationsValues(PowerstationAPI.Models.Payload)">
+            <summary>
+            calculates the prices for kwh for each powerplant and the power accprding to efficiency
+            </summary>
+            <param name="requestBody"></param>
+            <returns>the list of powerplants ordered by price to produce one kwh</returns>
+        </member>
+    </members>
+</doc>
